@@ -30,7 +30,7 @@ h1{
     height: 100vh;
     color: var(--colorLight2);
     background: rgb(54,141,145);
-   background: linear-gradient(148deg, rgba(54,141,145,1) 0%, rgba(13,121,130,1) 15%, rgba(13,179,166,1) 100%);
+   background: linear-gradient(148deg, rgb(17, 76, 80) 0%, rgb(4, 74, 81) 15%, rgb(9, 146, 135) 100%);
 
 }
 
