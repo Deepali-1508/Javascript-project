@@ -1,4 +1,4 @@
-Project Title: [weather-wise-hub](https://weather-wise-224kmw37p-deepali-1508.vercel.app/) 
+Project Title: [weather-wise-hub](https://weather-wise-qqqf4v9kt-deepali-1508.vercel.app/) 
 
 
 Description:
