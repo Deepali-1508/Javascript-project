@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Weather App</h1>
+        <div class="tab-container">
+            <p class="tab" data-userWeather>Your weather</p>
+            <p class="tab" data-searchWeather>Search Weather</p>
+        </div>
+
+        <div class="weather-container">
+        <!-- grant access container -->
+        <div   class="sub-container grant-access-container" data-grantAccess>
+            <img src="./assets/location.svg" alt="" width="100" height="100">
+            <p>Grant Location Access</p>
+            <p>Allow Access to get weather information</p>
+            <button class="button" data-grantAccessBtn>Grant Access</button>
+        </div>
+
+    
+
+        <!-- loading container -->
+        <div class="sub-container loading-container">
+         <img src="./assets/epic-loading.gif" alt="" width="80" height="80">
+         <p>Loading ...</p>
+        </div>
+
+        <!-- search form -->
+        <form class="search-form"  data-searchForm>
+          <input type="text" placeholder="Search your city...." data-searchInput>
+          <button class="btn" data-searchButton type="submit">
+            <img src="./assets/search.png" alt="">
+          </button>
+        </form>
+
+    <!-- error container -->
+    <div class="sub-container error-container" data-errorContainer>
+        <div class="error-icon">
+          <img src="./assets/404-page-not-found.svg" alt="">
+        </div>
+        <p data-errorMsg></p>
+      </div>
+
+        <!-- user-info-container -->
+        <div class="sub-container user-info-container" >
+            <div class="name">
+                <p data-cityName></p>
+                <img data-countryFlagIcon ></img>
+            </div>
+            
+
+            <!-- weather desc, icon and temperature -->
+            <p data-weatherDesc></p>
+            <img data-weatherIcon></img>
+            <p data-temperature></p>
+
+
+            <div class=" parameter-container">
+                <div class="parameter">
+                    <img src="./assets/wind.svg" alt="">
+                    <p>Windspeed</p>
+                    <p data-windSpeed></p>
+                </div>
+
+                <div class="parameter">
+                    <img src="./assets/cloud.svg"   alt="">
+                    <p>clouds</p>
+                    <p data-clouds></p>
+                </div>
+
+                <div class="parameter">
+                    <img src="./assets/humidity.svg"  alt="">
+                    <p>Humidity</p>
+                    <p data-humidity></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
