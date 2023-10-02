@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="name-container">
+            <h1>GithubFind</h1>
+              <button class="mode-button dark" data-modeButton>
+                <img src="./assets/light-mode.png" data-modeIcon width="20" height="20"></img>
+              </button>
+        </div>
+
+           <form class="search-user-form" data-searchUserForm>
+            <div class="input-container">
+                <img src="./assets/search-icon.png">
+                <input class="input" type="text" placeholder="Enter a Github username..." data-searchUserInput>
+            </div>
+            <button type="submit">Search</button>
+           </form>
+
+           <div class="user-profile-container">
+            <img src="" alt="" class="user-img" data-userImg >
+
+            <!-- user info section -->
+             <div class="user-info-container">
+
+                <div class="profile-name-container">
+                    <p data-userName></p>
+                    <p data-joinedDate></p>
+                </div>
+               
+                <a href="" data-userAccountLink></a>
+                <p data-userBio class="user-bio"></p>
+
+
+                <!-- user stats container -->
+                <div class="user-stats-container">
+                    <!-- repos -->
+                    <div class="stats">
+                        <p>Repos</p>
+                        <p data-userRepos>11</p>
+                    </div>
+
+                    <!-- followers -->
+                     <div class="stats">
+                        <p>Followers</p>
+                        <p data-userFollowers>1</p>
+                    </div>
+
+                    <!-- following -->
+                    <div class="stats">
+                        <p>Following</p>
+                        <p data-userFollowing>1</p>
+                    </div>
+                </div>
+             
+                <div class="social-profile-container">
+
+                    <!-- location -->
+                    <div class="social-profile">
+                        <img src="./assets/location.png" width="30" height="30">
+                        <p data-userLocation></p>
+                    </div>
+                    <!-- link -->
+                    <div class="social-profile">
+                        <img src="./assets/link.png" width="30" height="30">
+                        <a href="" data-userWebsite></a>
+                    </div>
+        
+                    <!-- twitter -->
+                    <div class="social-profile">
+                        <img src="./assets//twitter.png" width="30" height="30">
+                        <p data-userTwitter></p>
+                    </div>
+
+                    <!-- address -->
+                    <div class="social-profile">
+                        <img src="./assets/residential.png" width="30" height="30">
+                        <p data-userCompany></p>
+                    </div>
+                </div>
+             </div>
+           </div>
+        </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
