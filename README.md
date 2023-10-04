@@ -7,3 +7,5 @@
 [DevDetective](https://dev-detective-1bilq8ksm-deepali-1508.vercel.app/)
 
 [Tic-Tac-Toe Game](https://tic-tac-ke7u9m85m-deepali-1508.vercel.app/)
+
+[Bubble Game](https://bubble-game-g3ubjqpmf-deepali-1508.vercel.app/)
