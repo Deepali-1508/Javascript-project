@@ -1,0 +1,354 @@
+/*  *,*::before,*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* body{
+   
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    flex-wrap: wrap;
+    overflow: hidden;
+} */
+
+/* .wrapper{
+  
+    width: 100%;
+    max-width: 650px;
+
+} 
+
+body{
+     height: 100%;
+    width: 100%;
+    background-image: url(./assests/background.jpg);
+    background-size: cover;
+    object-fit: contain;
+    background-repeat: no-repeat; 
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    flex-wrap: wrap;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    background-image: url(./assests/background.jpg);
+    background-size: cover;
+    background-repeat: repeat-x;
+    background-position: center;
+}
+
+.wrapper{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+h1{
+    font-size: 3rem;
+    font-weight: bold;
+    object-fit: contain;
+}
+.scoreboard{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.score{
+    width: 300px;
+    height: 300px;
+    background-image: url(./assests/woodenBoard.png);
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    right: 10px;
+}
+
+.start{
+    width: 300px;
+    height: 300px;
+    background-image: url(./assests/woodenBoard.png);
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    left: 10px; 
+    margin-left: 4rem;
+}
+
+.timer{
+    width: 300px;
+    height: 300px;
+    background-image: url(./assests/woodenBoard.png);
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+}
+
+.game{
+    width: 600px;
+    height: 400px;
+    display:flex;
+    flex-wrap:wrap;
+    margin: 0 auto;
+}
+
+.hole{
+    flex : 1 0 33.33%;
+    overflow: hidden;
+    position: relative;
+}
+
+.hole::after{
+    display: block;
+    background: url(./assests/dirt.png) bottom center no-repeat;
+    background-size: contain;
+    content: '';
+    width: 100%;
+    height: 90px;
+    position: absolute;
+    z-index: 2;
+    bottom: -30px;
+}
+
+.mole{
+    background: url(./assests/mole.png) bottom center no-repeat;
+    background-size: 80%;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    transition: all 0.4s;
+}  */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,body  {
+    width: 100%;
+    height: 100%;
+    font-size: 35px;
+    background: #98BCF4;
+    background-image: url(./assests/background.jpg);
+    background-size: contain;
+    object-fit: contain;
+    background-repeat:  repeat-x;
+    background-position: center;
+    text-align: center;
+
+}
+
+.wrapper{
+    background-repeat: repeat-x;
+    background-size: contain;
+    object-fit: contain;
+}
+.scoreboard{
+    display: flex;
+    justify-content: space-evenly;
+     align-items: center;
+     position: relative;
+     margin-left: 3rem;
+     margin-right:3rem;
+}
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.scoreboard p {
+    background-image: url(./assests/woodenBoard.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 300px;
+    color: #fff;
+    font-size: 40px;
+    position: absolute;
+     transform: translateY(70%);
+}
+
+.scoreboard p span {
+    margin-top: 3rem;
+    opacity: 0.7;
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+    font-size: 100px;
+    line-height: 1;
+    margin-bottom: 0;
+}
+
+.score {
+   right: 10px;
+}
+.score span{
+    margin-bottom: 1.1rem;
+    opacity: 0.7;
+}
+.timer span{
+    margin-bottom: 1.1rem;
+    opacity: 0.7;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+.start{
+    left: 10px;
+}
+.game {
+    /* width: 600px;
+    height: 400px; */
+    width: 100%; /* Make the game container full-width */
+    max-width: 1200px; /* Set a maximum width for larger screens */
+    height: 300px;
+    display:flex;
+    flex-wrap:wrap;
+    margin: 0 auto;
+    /* right: 10px; */
+    position: absolute;
+    bottom: 10%;
+    left: 10px;
+    right: 10px;
+    
+}
+
+.hole{
+    /* align-items: center;
+    justify-content: center; */
+    flex: 0 0 16.666%;
+    /* flex: 1 0 33.33%; */
+    overflow: hidden;
+    position: relative;
+}
+
+.hole:after{
+    display:block;
+    background: url(./assests/dirt.png) bottom center no-repeat;
+    background-size:contain;
+    content: '';
+    width: 100%;
+    height: 90px;
+    position: absolute;
+    z-index: 2;
+    bottom: -30px;
+}
+
+.mole {
+    background: url('./assests/mole.png') bottom center no-repeat;
+    background-size: 80%;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    transition: all 0.4s;
+}
+
+.hole.up .mole{
+    top:0;
+}
+
+button{
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: #fff;
+    margin-left: 20px;
+    margin-bottom: 1.1rem;
+    margin-top: 3rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+
+@media screen and (max-width: 1307px) {
+    body{
+        background-size: cover;
+    }
+}
+
+@media screen and (max-width: 2225px) {
+    body{
+
+        background-size: contain;
+        /* background-repeat: no-repeat; */
+    }
+}
+
+@media screen and (max-width:1061px) {
+    .body{
+        background-repeat: no-repeat;
+    }
+    .scoreboard p{
+        width: 200px;
+        height: 200px;
+    }
+
+    .scoreboard p span{
+       margin-top: 2rem;
+    }
+    button{
+        margin-top: 2rem;
+    }
+}
+
+
+@media screen and (max-width: 900px){
+ .scoreboard p span{
+    font-size: 20px;
+ }
+
+ .scoreboard p button{
+    font-size: 20px;
+ }
+
+}
+
+@media screen and (max-width: 617px){
+    .scoreboard p {
+       background-image: none;
+       display: flex;
+       gap: 10px;
+       
+    }
+   
+    .scoreboard p span , .scoreboard p button {
+       font-size: 10px;
+       margin-bottom: 3rem;
+       background: linear-gradient(90deg, rgba(180, 102, 36, 1) 0%, rgba(200, 119, 51, 1) 4%, rgba(157, 82, 19, 1) 8%, rgba(113, 64, 22, 1) 12%, rgba(183, 111, 49, 1) 17%, rgba(187, 111, 46, 1) 21%, rgba(223, 139, 67, 1) 27%, rgba(180, 102, 36, 1) 33%, rgba(223, 139, 67, 1) 40%, rgba(210, 158, 75, 1) 50%, rgba(170, 106, 28, 1) 58%, rgba(203, 136, 53, 1) 67%, rgba(190, 123, 40, 1) 75%, rgba(190, 119, 31, 1) 83%, rgba(203, 136, 53, 1) 89%, rgba(150, 99, 36, 1) 95%, rgba(167, 109, 33, 1) 100%);
+        border-radius: 10px;
+        padding: 10px;
+        width: 60px;
+        height: 30px;
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+   
+   }
+
+   @media screen and (max-width: 608px){
+    
+    body{
+       display: none;
+    }
+    
+   }
