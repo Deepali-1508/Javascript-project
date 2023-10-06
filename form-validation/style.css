@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;1,400&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.wrapper{
+    width: 100wh;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.h1{
+    font-size: 5rem;
+    font-weight: 600;
+}
+
+form{
+    width: 100%;
+    max-width: 600px;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    margin: 2rem 0;
+    
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+    line-height: 2rem;
+}
+
+.form-group input{
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 0.5rem 0;
+}
+
+.btn-group{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.btn-group button{
+    padding: 0.8rem 1rem;
+    border: none;
+    font-weight: bold;
+    color: white;
+    border-radius: 5px;
+    margin-right: 2px;
+    cursor: pointer;
+}
+
+.btn-group p span{
+    color: #0031b8;
+    font-weight: bold;
+    cursor: pointer;
+}
+#submit-btn{
+    background-color: #0031b8;
+}
+
+#submit-btn:hover{
+    background-color: #002080;
+}
+#login-submit-btn{
+    background-color: #05970c;
+}
+
+#login-submit-btn:hover{
+    background-color: #066a0b;
+}
+
+#reset-btn{
+    background-color: #8b8b8b;
+}
+
+#reset-btn:hover{
+    background-color: #6b6b6b;
+}
+
+#logout-btn{
+    padding: 0.6rem 1rem;
+    border-radius: 5px;
+    font-weight: bold;
+    background-color: #d1d1d1;
+    color: #000;
+    border: 2px solid #d1d1d1;
+}
+#logout-btn:hover{
+    border: 2px solid #d1d1d1;
+    background-color: transparent;
+}
+.danger-span{
+    color: red;
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin-top: 0.2rem;
+}
+.logedIn{
+    margin: auto 0;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap:2rem;
+}
+
+
+.logedIn.active{
+    display: flex;
+}
+
+.singIn{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.singIn.active{
+    display: flex;
+}

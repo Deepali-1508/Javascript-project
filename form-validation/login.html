@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+    <title>Form login</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="logedIn" data-logedIn>
+            <h1>Loged In</h1>
+            <p>You are loged in</p>
+            <button id="logout-btn">Logout</button>
+        </div>
+
+        <div class="singIn" data-singIn>
+            <h1>Form Validation In Javascript</h1>
+            <h3>Login</h3>
+    
+           <form id="form">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username">
+                    <span id="nameSpan"  class="danger-span" ></span>
+                </div>
+    
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password">
+                    <span id="passwordSpan"  class="danger-span"> </span>
+                </div>
+    
+                <span id="loginSpan"  class="danger-span"> </span>
+                <div class="btn-group"> 
+                        <button type="submit" id="login-submit-btn">Submit</button>
+                     <p>Already have an account? <span> <a href="index.html">SignUp</a></span></p>
+                    </div>
+            </form>
+        </div>
+       
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>
