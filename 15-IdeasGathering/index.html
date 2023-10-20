@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Ideas Gathering - Note taking app</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <img src="./assets/man.webp" width="120rem">
+            <div>
+                <h1>Ideas Gathering</h1>
+                <p>Take notes and save them to your browser</p>
+            </div>
+            <img src="./assets/man.webp" width="120rem">
+        </header>
+
+        <div class="notesContainer">
+            <div class="asideContainer">
+                <button class="new-btn" data-newButton>+New</button>
+                <ul class="allNotes" data-allNotes>
+                <li>hello</li>
+                <li>hello</li>
+                </ul>
+             </div>
+     
+             <div class="singleNoteContainer" data-createNoteContainer>
+                <div class="singleNote">
+                    <input type="text" data-noteTitle placeholder="Title">
+                    <textarea data-noteText placeholder="Write your note here..."></textarea>
+                </div>
+                <button id="save-note" data-saveButton>Save</button>
+                <button id="delete-btn" data-deleteButton>Delete</button>
+                <img src="./assets/person1.png" alt="">
+             </div>
+        </div>
+       
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
