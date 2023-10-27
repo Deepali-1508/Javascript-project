@@ -26,4 +26,9 @@
 
 13. super_mario_map => Experience a taste of nostalgia with this Mario-themed map. 
 
-14|[IdeasGathering](https://idea-gathering.vercel.app/)
+14[IdeasGathering](https://idea-gathering.vercel.app/)
+
+15 [favFood](https://fav-food-one.vercel.app/)
+
+16 [Art Gallery](https://art-gallery-blue-chi.vercel.app/)
+
