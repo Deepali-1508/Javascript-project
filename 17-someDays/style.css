@@ -1,0 +1,359 @@
+@font-face {
+    font-family: "Machinkly";
+    src: url("https://assets.codepen.io/383755/Machinkly.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "Avenir";
+    src: url("https://assets.codepen.io/383755/AvenirNextLTPro-Bold.woff") format("woff");
+  }
+  body {
+    --progress: 0;
+    --purple: #8648fe;
+    --blue: #0ad2d4;
+    display: block;
+    width: 100vw;
+    font-family: "Avenir";
+    height: 2800vh;
+    min-height: 2800vh;
+    padding: 0;
+    margin: 0;
+    --velocity: 0;
+    background: #000;
+  }
+  body .panelwrap {
+    position: fixed;
+    width: 100vw;
+    height: 2800vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    transform: translateY(calc(var(--progress) * -1%)) translateZ(0px);
+    z-index: -1;
+    background: #000;
+  }
+
+  body .panelwrap .panel {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    box-shadow: inset 0 0 0 10vmin #000;
+  }
+  body .panelwrap .panel:before, body .panelwrap .panel:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-shadow: inherit;
+    left: 0;
+    top: 0;
+  }
+
+
+  body .panelwrap .panel:nth-of-type(even):after {
+    transform: scaleY(-1);
+  }
+  body .panelwrap .panel:nth-of-type(1):before {
+    background: url("https://images.pexels.com/photos/65882/chocolate-dark-coffee-confiserie-65882.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=300") 50% 50%/cover no-repeat;
+  }
+  body .panelwrap .panel:nth-of-type(2):before {
+    background: url("https://images.pexels.com/photos/5224910/pexels-photo-5224910.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=300") 50% 50%/cover no-repeat;
+  }
+  body .panelwrap .panel:nth-of-type(3):before {
+    background: url("https://images.pexels.com/photos/963755/pexels-photo-963755.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500") 50% 50%/cover no-repeat;
+  }
+  body .panelwrap .panel:nth-of-type(4):before {
+    background: url("https://images.pexels.com/photos/1377452/pexels-photo-1377452.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500") 50% 50%/cover no-repeat;
+  }
+  body .panelwrap .panel:nth-of-type(5):before {
+    background: url("https://images.pexels.com/photos/34519/rain-boots-umbrella-wet.jpg?auto=compress&cs=tinysrgb&dpr=2&w=500") 50% 50%/cover no-repeat;
+  }
+  body .panelwrap .panel:nth-of-type(6):before {
+    background: url("https://images.pexels.com/photos/1907228/pexels-photo-1907228.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500") 50% 50%/cover no-repeat;
+  }
+  body .panelwrap .panel:nth-of-type(7):before {
+    background: url("https://images.pexels.com/photos/3735722/pexels-photo-3735722.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500") 50% 50%/cover no-repeat;
+  }
+  body .panelwrap .panel:nth-of-type(8):before {
+    background: url("https://images.pexels.com/photos/5637451/pexels-photo-5637451.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500") 50% 50%/cover no-repeat;
+  }
+  body .panelwrap .panel:nth-of-type(9):before {
+    background: url("https://images.pexels.com/photos/708587/pexels-photo-708587.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500") 50% 50%/cover no-repeat;
+  }
+  body .panelwrap .panel:nth-of-type(10):before {
+    background: url("https://images.pexels.com/photos/5765602/pexels-photo-5765602.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500") 50% 50%/cover no-repeat;
+  }
+  body .panelwrap .panel:nth-of-type(11):before {
+    background: url("https://images.pexels.com/photos/3862617/pexels-photo-3862617.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500") 50% 50%/cover no-repeat;
+  }
+  body .panelwrap .panel:nth-of-type(12):before {
+    background: url("https://images.pexels.com/photos/436413/pexels-photo-436413.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500") 50% 50%/cover no-repeat;
+  }
+  body .panelwrap .panel:nth-of-type(13):before {
+    background: url("https://images.pexels.com/photos/4039607/pexels-photo-4039607.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500") 50% 50%/cover no-repeat;
+  }
+  body .panelwrap .panel:nth-of-type(14):before {
+    background: url("https://images.pexels.com/photos/873083/pexels-photo-873083.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500") 50% 50%/cover no-repeat;
+  }
+  body .panelwrap .panel:nth-of-type(15):before {
+    background: url("https://images.pexels.com/photos/4016527/pexels-photo-4016527.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500") 50% 50%/cover no-repeat;
+  }
+  body .panelwrap .panel:nth-of-type(16):before {
+    background: url("https://images.pexels.com/photos/6195086/pexels-photo-6195086.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500") 50% 50%/cover no-repeat;
+  }
+  body .panelwrap .panel:nth-of-type(17):before {
+    background: url("https://images.pexels.com/photos/4585545/pexels-photo-4585545.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500") 50% 50%/cover no-repeat;
+  }
+  body .panelwrap .panel:nth-of-type(18):before {
+    background: url("https://images.pexels.com/photos/698485/pexels-photo-698485.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500") 50% 50%/cover no-repeat;
+  }
+  body .panelwrap .panel:nth-of-type(19):before {
+    background: url("https://images.pexels.com/photos/1264000/pexels-photo-1264000.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500") 50% 50%/cover no-repeat;
+  }
+  body .panelwrap .panel:nth-of-type(20):before {
+    background: url("https://images.pexels.com/photos/2253275/pexels-photo-2253275.jpeg?auto=compress&cs=tinysrgb&w=500") 50% 50%/cover no-repeat;
+  }
+  body .panelwrap .panel:nth-of-type(21):before {
+    background: url("https://images.pexels.com/photos/37072/abraham-lincoln-lincoln-memorial-washington-dc-lincoln.jpg?auto=compress&cs=tinysrgb&w=500") 50% 50%/cover no-repeat;
+  }
+  body .panelwrap .panel:nth-of-type(22):before {
+    background: url("https://images.pexels.com/photos/89247/pexels-photo-89247.png?auto=compress&cs=tinysrgb&dpr=2&w=500") 50% 50%/cover no-repeat;
+  }
+  body .panelwrap .panel:nth-of-type(23):before {
+    background: url("https://images.pexels.com/photos/430207/pexels-photo-430207.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500") 50% 50%/cover no-repeat;
+  }
+  body .panelwrap .panel:nth-of-type(24):before {
+    background: url("https://images.pexels.com/photos/4417768/pexels-photo-4417768.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500") 50% 50%/cover no-repeat;
+  }
+  body .panelwrap .panel:nth-of-type(25):before {
+    background: url("https://images.pexels.com/photos/5950449/pexels-photo-5950449.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500") 50% 50%/cover no-repeat;
+  }
+  body .panelwrap .panel:nth-of-type(26):before {
+    background: url("https://images.pexels.com/photos/1799307/pexels-photo-1799307.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500") 50% 50%/cover no-repeat;
+  }
+  body .panelwrap .panel:nth-of-type(27):before {
+    background: url("https://images.pexels.com/photos/598966/pexels-photo-598966.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500") 50% 50%/cover no-repeat;
+  }
+  body .panelwrap .panel:nth-of-type(28):before {
+    background: url("https://images.pexels.com/photos/208474/pexels-photo-208474.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500") 50% 50%/cover no-repeat;
+  }
+  body .panelwrap .panel:nth-of-type(29):before {
+    background: url("https://images.pexels.com/photos/65882/chocolate-dark-coffee-confiserie-65882.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=300") 50% 50%/cover no-repeat;
+  }
+  body:before, body:after {
+    content: "";
+    position: fixed;
+    width: clamp(15vw, 70vmin, 50vw);
+    height: 100vh;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    -webkit-mask: linear-gradient(to right, #000 7.5%, transparent);
+    backdrop-filter: blur(20px);
+    box-shadow: inset 10vmin 0 10vmin rgba(0, 0, 0, 0.75);
+  }
+  body:after {
+    -webkit-mask: linear-gradient(to left, #000 7.5%, transparent);
+    right: 0;
+    left: auto;
+    box-shadow: inset -10vmin 0 10vmin rgba(0, 0, 0, 0.75);
+  }
+  body * {
+    box-sizing: border-box;
+    transform-style: preserve-3d;
+  }
+  body > h1,
+  body > p {
+    position: fixed;
+    top: 0;
+    z-index: 9;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    font-size: 3vmin;
+    margin: 2.5vmin 0;
+    text-transform: uppercase;
+  }
+  body p {
+    top: auto;
+    bottom: 0;
+    font-size: 1.5vmin;
+  }
+  body .wrap {
+    position: fixed;
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 50%;
+    z-index: 9;
+    perspective: 35vmin;
+    transform: scaleX(clamp(1, var(--velocity), 3)) translateZ(0px);
+    filter: blur(calc((var(--velocity) * 2px) - 1px));
+  }
+  body ul {
+    list-style-type: none;
+    width: 0vmin;
+    height: 0vmin;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: calc(50% - 50vmin);
+    left: 50%;
+    margin: 0;
+    padding: 0;
+    transform: rotateX(-90deg) translateZ(50vmin);
+    transform-origin: 50% 50%;
+  }
+  body ul li {
+    position: absolute;
+    margin: 0px;
+    width: 50vmin;
+    height: 50vmin;
+    left: -25vmin;
+    top: -25vmin;
+    transform-origin: 50% -200vmin;
+    transform-style: preserve-3d;
+  }
+  body ul li:nth-of-type(1) {
+    transform: rotate(calc(0deg + var(--progress) * 3.6deg));
+  }
+  body ul li:nth-of-type(2) {
+    transform: rotate(calc(-12.8571428571deg + var(--progress) * 3.6deg));
+  }
+  body ul li:nth-of-type(3) {
+    transform: rotate(calc(-25.7142857143deg + var(--progress) * 3.6deg));
+  }
+  body ul li:nth-of-type(4) {
+    transform: rotate(calc(-38.5714285714deg + var(--progress) * 3.6deg));
+  }
+  body ul li:nth-of-type(5) {
+    transform: rotate(calc(-51.4285714286deg + var(--progress) * 3.6deg));
+  }
+  body ul li:nth-of-type(6) {
+    transform: rotate(calc(-64.2857142857deg + var(--progress) * 3.6deg));
+  }
+  body ul li:nth-of-type(7) {
+    transform: rotate(calc(-77.1428571429deg + var(--progress) * 3.6deg));
+  }
+  body ul li:nth-of-type(8) {
+    transform: rotate(calc(-90deg + var(--progress) * 3.6deg));
+  }
+  body ul li:nth-of-type(9) {
+    transform: rotate(calc(-102.8571428571deg + var(--progress) * 3.6deg));
+  }
+  body ul li:nth-of-type(10) {
+    transform: rotate(calc(-115.7142857143deg + var(--progress) * 3.6deg));
+  }
+  body ul li:nth-of-type(11) {
+    transform: rotate(calc(-128.5714285714deg + var(--progress) * 3.6deg));
+  }
+  body ul li:nth-of-type(12) {
+    transform: rotate(calc(-141.4285714286deg + var(--progress) * 3.6deg));
+  }
+  body ul li:nth-of-type(13) {
+    transform: rotate(calc(-154.2857142857deg + var(--progress) * 3.6deg));
+  }
+  body ul li:nth-of-type(14) {
+    transform: rotate(calc(-167.1428571429deg + var(--progress) * 3.6deg));
+  }
+  body ul li:nth-of-type(15) {
+    transform: rotate(calc(-180deg + var(--progress) * 3.6deg));
+  }
+  body ul li:nth-of-type(16) {
+    transform: rotate(calc(-192.8571428571deg + var(--progress) * 3.6deg));
+  }
+  body ul li:nth-of-type(17) {
+    transform: rotate(calc(-205.7142857143deg + var(--progress) * 3.6deg));
+  }
+  body ul li:nth-of-type(18) {
+    transform: rotate(calc(-218.5714285714deg + var(--progress) * 3.6deg));
+  }
+  body ul li:nth-of-type(19) {
+    transform: rotate(calc(-231.4285714286deg + var(--progress) * 3.6deg));
+  }
+  body ul li:nth-of-type(20) {
+    transform: rotate(calc(-244.2857142857deg + var(--progress) * 3.6deg));
+  }
+  body ul li:nth-of-type(21) {
+    transform: rotate(calc(-257.1428571429deg + var(--progress) * 3.6deg));
+  }
+  body ul li:nth-of-type(22) {
+    transform: rotate(calc(-270deg + var(--progress) * 3.6deg));
+  }
+  body ul li:nth-of-type(23) {
+    transform: rotate(calc(-282.8571428571deg + var(--progress) * 3.6deg));
+  }
+  body ul li:nth-of-type(24) {
+    transform: rotate(calc(-295.7142857143deg + var(--progress) * 3.6deg));
+  }
+  body ul li:nth-of-type(25) {
+    transform: rotate(calc(-308.5714285714deg + var(--progress) * 3.6deg));
+  }
+  body ul li:nth-of-type(26) {
+    transform: rotate(calc(-321.4285714286deg + var(--progress) * 3.6deg));
+  }
+  body ul li:nth-of-type(27) {
+    transform: rotate(calc(-334.2857142857deg + var(--progress) * 3.6deg));
+  }
+  body ul li:nth-of-type(28) {
+    transform: rotate(calc(-347.1428571429deg + var(--progress) * 3.6deg));
+  }
+  body ul li:nth-of-type(even) time {
+    transform: rotateX(90deg) translateZ(-12.5vmin) translateY(15vmin);
+  }
+  body ul li:nth-of-type(even) time:after {
+    top: auto;
+    bottom: 100%;
+  }
+  body ul li span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    color: transparent;
+    -webkit-text-stroke: 0.2vmin #fff;
+    text-transform: uppercase;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transform: rotateX(90deg) translateZ(-5vmin);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 6.5vmin;
+    text-align: center;
+    line-height: 0.9;
+    padding: 2vmin;
+    word-break: break-word;
+    -webkit-text-fill-color: transparent;
+  }
+  body ul li time {
+    position: absolute;
+    z-index: -1;
+    transform-style: preserve-3d;
+    transform: rotateX(90deg) translateZ(-12.5vmin) translateY(-15vmin);
+    width: 5vmin;
+    padding: 0.5vmin 0 0 0;
+    margin: 0;
+    height: 5vmin;
+    top: 0;
+    left: calc(50% - 2.5vmin);
+    box-shadow: inset 0 0 0 0.1vmin #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vmin;
+    color: #fff;
+    border-radius: 100%;
+    font-weight: 100;
+  }
+  body ul li time:after {
+    content: "";
+    position: absolute;
+    width: 0.125vmin;
+    height: 5vmin;
+    top: 100%;
+    left: calc(50% - 0.0625vmin);
+    background: #fff;
+  }
