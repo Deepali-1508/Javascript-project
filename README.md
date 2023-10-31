@@ -34,3 +34,7 @@
 
 17 [someDays](https://some-days.vercel.app/)
 
+18 make art gallery responsive
+
+19 [tour-with-me](https://tour-with-me.vercel.app/)
+
