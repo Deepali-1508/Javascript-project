@@ -18,3 +18,4 @@
 | 16     | art-gallery        | [art-gallery](https://art-gallery-blue-chi.vercel.app/) |
 | 17     | some-days          | [some-days](https://some-days.vercel.app/)          |
 | 18     | tour-with-me       | [tour-with-me](https://tour-with-me.vercel.app/)    |
+| 19     | course-find/content crafter       | [content crafter](https://content-crafter-flame.vercel.app/)   |
