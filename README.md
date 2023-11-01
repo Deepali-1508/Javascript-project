@@ -1,40 +1,70 @@
-# Javascript-project
+# Getting Started with Create React App
 
-1. [WeatherWiseHub](https://weather-wise-i9c5emyj7-deepali-1508.vercel.app/)
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-2. [SecurePassGen](https://secure-pass-ejhg9366l-deepali-1508.vercel.app/)
+## Available Scripts
 
-3. [DevDetective](https://dev-detective-1bilq8ksm-deepali-1508.vercel.app/)
+In the project directory, you can run:
 
-4. [Tic-Tac-Toe Game](https://tic-tac-ke7u9m85m-deepali-1508.vercel.app/)
+### `npm start`
 
-5. [Bubble Game](https://bubble-game-g3ubjqpmf-deepali-1508.vercel.app/)
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-6. [Whack-a-Mole](https://whack-a-mole-q11eq3zq7-deepali-1508.vercel.app/)
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-7. [File validation](https://form-validation-wktqopuq8-deepali-1508.vercel.app/index.html)
+### `npm test`
 
-8. [Testimonial App](https://testimonial-6v4hpcdcw-deepali-1508.vercel.app/)
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-9. [Memory Game](https://memory-game-mskb9xolj-deepali-1508.vercel.app/)
+### `npm run build`
 
-10. [Rock Paper Scissor](https://rock-paper-scissor-j0efj6b8a-deepali-1508.vercel.app/)
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-11. [Chatbot](https://chatbot-15azgna4d-deepali-1508.vercel.app/)
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-12. [findHere](https://findhere.vercel.app/) a modern landing page
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-13. super_mario_map => Experience a taste of nostalgia with this Mario-themed map. 
+### `npm run eject`
 
-14[IdeasGathering](https://idea-gathering.vercel.app/)
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-15 [favFood](https://fav-food-one.vercel.app/)
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-16 [Art Gallery](https://art-gallery-blue-chi.vercel.app/)
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-17 [someDays](https://some-days.vercel.app/)
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-18 make art gallery responsive
+## Learn More
 
-19 [tour-with-me](https://tour-with-me.vercel.app/)
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
