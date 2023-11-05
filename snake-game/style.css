@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(./img/bg.jpg);
+    background-size: 110vw 100vh;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    height: 100vh;
+    overflow: hidden;
+    margin-left: 5rem;
+    
+}
+
+.board{
+    width: 60vw;
+    height: 80vh;
+    display: grid;
+    grid-template-columns: repeat(18,1fr);
+    grid-template-rows: repeat(18,1fr);
+    margin: 5vh auto;
+    place-items: center;
+    background: linear-gradient(to right, #b0ee8c, #e5efab);
+    box-shadow: 0 0 10px 10px rgba(51, 89, 2, 0.3);
+    margin-left: 5rem;
+}
+
+h1{
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+}
+.scores{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2px;
+    gap: 70px;
+    font-weight: bold;
+}
+.snake-head{
+    width: 100%;
+    height: 100%;
+    background-image: url(./img/snake.png);
+    background-size: 40px 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 99;
+    transition: transform 0.2s ease-in-out;
+    
+}
+
+  
+.snake-body{
+    width: 100%;
+    height: 100%;
+    background-image: url(./img/result1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background: linear-gradient(222deg, rgba(255, 255, 0, 1) 0%, rgba(181, 203, 75, 1) 0%, rgba(182, 207, 63, 1) 35%, rgba(226, 228, 129, 1) 100%);
+    /* background: radial-gradient(circle at 50% 50%, rgba(165, 176, 21, 1) 6%, rgba(117, 124, 0, 1) 60%, rgba(155, 165, 11, 1) 100%); */
+    border-radius: 2px;
+    z-index: 99;
+}
+
+.food{
+    width: 40px;
+    height: 40px;
+    /* background-color: yellow; */
+    border-radius: 50%;
+    background-image: url(./img/apple.png);
+    background-size: 40px 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+button{
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.levels, .buttons{
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+    gap: 10px;
+}
+
+.levels button{
+    background-color: #fff;
+    color: #000;
+}
+
+.play-btn{
+    background-color: blue;
+    color: #fff;
+}
+
+.easy-btn.active{
+    color: #fff;
+    background-color: green;
+}
+.medium-btn.active{
+    color: #fff;
+    background-color: rgb(179, 179, 6);
+}
+.hard-btn.active{
+    color: #fff;
+    background-color: red;
+}

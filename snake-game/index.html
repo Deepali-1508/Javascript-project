@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>SNAKE GAME</title>
+</head>
+<body>
+    <div class="buttons">
+        <div class="levels">
+            <button class="easy-btn" data-easyBtn>easy</button>
+            <button class="medium-btn" data-mediumBtn>medium</button>
+            <button class="hard-btn" data-hardBtn>hard</button>
+        </div>
+        <button class="play-btn" data-playBtn>play</button>
+    </div>
+    
+    <div class="body">
+        <h1>Snake Game</h1>
+        <div class="scores">
+            <p>HIGH SCORE: <span id="highScore">0</span></p>
+            <p>YOUR SCORE: <span id="score">0</span></p>
+        </div>
+        <div id="snake-board" class="board"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
