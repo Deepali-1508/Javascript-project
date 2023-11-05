@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>JAVASCRIPT PROJECT</title>
+</head>
+<body>
+    
+    <div class="container">
+        <div id="calculator">
+            <h1>CALCULATOR</h1>
+            <div class="cal-display">
+                <input type="text" id="input" placeholder="0" data-numberInput>
+
+                <div>
+                    <button class="btn" onclick="clearInput()">C</button>
+                    <button class="btn" onclick="deleteNumber()">DEL</button>
+                    <button class="btn" onclick="getInput('%')">%</button>
+                    <button class="btn" onclick="getInput('/')">/</button>
+                </div>
+
+                <div>
+                    <button class="btn" onclick="getInput('7')">7</button>
+                    <button class="btn" onclick="getInput('8')">8</button>
+                    <button class="btn" onclick="getInput('9')">9</button>
+                    <button class="btn" onclick="getInput('*')">X</button>
+                </div>
+
+                <div>
+                    <button class="btn" onclick="getInput('4')">4</button>
+                    <button class="btn" onclick="getInput('5')">5</button>
+                    <button class="btn" onclick="getInput('6')">6</button>
+                    <button class="btn" onclick="getInput('-')">-</button>
+                </div>
+
+                <div>
+                    <button class="btn" onclick="getInput('1')">1</button>
+                    <button class="btn" onclick="getInput('2')">2</button>
+                    <button class="btn" onclick="getInput('3')">3</button>
+                    <button class="btn" onclick="getInput('+')">+</button>
+                </div>
+
+                <div>
+                    <button class="btn" onclick="getInput('0')">0</button>
+                    <button class="btn" onclick="getInput('.')">.</button>
+                    <button class="btn" onclick="getResult()">=</button>
+                </div>
+            </div>
+        </div>
+
+
+    </div><script src= 
+    "https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.js"
+            integrity= 
+    "sha512-BbVEDjbqdN3Eow8+empLMrJlxXRj5nEitiCAK5A1pUr66+jLVejo3PmjIaucRnjlB0P9R3rBUs3g5jXc8ti+fQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"></script> 
+        <script src= 
+    "https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.min.js"
+            integrity= 
+    "sha512-iphNRh6dPbeuPGIrQbCdbBF/qcqadKWLa35YPVfMZMHBSI6PLJh1om2xCTWhpVpmUyb4IvVS9iYnnYMkleVXLA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"></script> 
+    <script src="script.js"></script>
+</body>
+</html>

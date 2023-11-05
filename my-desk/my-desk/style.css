@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    /* background-color: #e4bfbf; */
+    background-color: #f0f0f0;
+    width: 100%;
+    height: 100%;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#calculator{
+    width: 80%;
+    height: 80%;
+    background-color: rgba(164, 131, 197,0.5);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 4rem;
+    border-radius: 1rem;
+    padding-bottom: 2rem;
+    box-shadow: 0 0 20px rgba(164, 131, 197,0.5);
+   
+}
+#calculator h1{
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+#calculator .cal-display{
+    width: 80%;
+    height:90%;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#calculator input{
+    margin-top: 4px;
+    width: 99%;
+    height: 13rem;
+    border-radius: 0.5rem;
+    border: none;
+    outline: none;
+    padding-left: 1rem;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    background-color: rgba(164, 131, 197,0.5);
+}
+
+#calculator .btn{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    border: none;
+    background-color: #f1f1f1;
+    font-size: 1.5rem;
+    color: #000;
+    margin: 0.5rem;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(164, 131, 197,0.6);
+    transition: transform 0.2s ease-in-out;
+}
+
+#calculator .btn:hover{
+    background-color: #e4bfbf;
+    transform: scale(1.1);
+}
+
+
+@media  screen and (max-width: 540px) {
+    #calculator .btn{
+        width: 2rem;
+        height: 2rem;
+        font-size: 1rem;
+    }
+
+    #calculator input{
+        height: 5rem;
+    }
+}
+
+@media  screen and (max-width: 335px){
+    #calculator h1{
+        font-size: 1.3rem;
+    }
+
+   #calculator .btn{
+       width: 1rem;
+       height: 1rem;
+       font-size: 0.5rem;
+   }
+
+    #calculator input{
+         height: 3rem;
+    }
+}
