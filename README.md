@@ -19,3 +19,5 @@
 | 17     | some-days          | [some-days](https://some-days.vercel.app/)          |
 | 18     | tour-with-me       | [tour-with-me](https://tour-with-me.vercel.app/)    |
 | 19     | course-find/content crafter       | [content crafter](https://content-crafter-flame.vercel.app/)   |
+| 20    | snake-game      | [snake-game](https://serpentine-challenge.vercel.app/)  |
+| 21    | my-desk      | [my-desk](https://my-desk.vercel.app/)https://my-desk.vercel.app/)  |
