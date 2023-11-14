@@ -12,6 +12,26 @@
 <body>
     
     <div class="container">
+
+        <h1>MY DESK</h1>
+        <div id="cross">
+           <button id="crossBtn"><i class="fa-solid fa-circle-xmark" style="color: #000000; font-size: 3rem;"></i></button>
+        </div>
+
+        <div id="my-list">
+           
+            <div class="list">
+                <!-- clock -->
+                <button id="clockBtn"><i class="fa-solid fa-clock" style="color: #f89a9a; font-size: 10rem;"></i></button>
+                <!--  calculator -->
+                <button id="calculatorBtn"><i class="fa-solid fa-calculator" style="color: rgba(164, 131, 197,0.5); font-size: 10rem;"></i></button>
+                 <!-- timer -->
+                <button id="timerBtn"><i class="fa-regular fa-hourglass" style="color: #000000; font-size: 10rem;"></i></button>
+            
+            </div>
+        </div>
+
+        
         <div id="calculator">
             <h1>CALCULATOR</h1>
             <div class="cal-display">
@@ -53,8 +73,82 @@
             </div>
         </div>
 
+          <!-- clock -->
+          <div id="clock" >
+            <h1>CLOCK</h1>
+            <div class="wall-clock">
+                <div class="needles">
+                    <p id="second-hand"></p>
+                    <p id="hour-hand"></p>
+                    <p id="minute-hand"></p>
+                    <p id="circle"></p>
+                </div>
+                <div class="numbers">
+                    <p>1</p>
+                    <p>2</p>
+                    <p>3</p>
+                    <p>4</p>
+                    <p>5</p>
+                    <p>6</p>
+                    <p>7</p>
+                    <p>8</p>
+                    <p>9</p>
+                    <p>10</p>
+                    <p>11</p>
+                    <p>12</p>
+                </div>
+              
+            </div>
+                <div class="clock-display">
+                    <div id="time">00:00:00</div>
+            </div>
+        </div>
 
-    </div><script src= 
+
+        <div id="timer" >
+            <h1>TIMER</h1>
+            <h1>Hour Min Sec</h1>
+            <div class="timer-container">
+                <div class="timer-display">
+                    <div class="number">0</div>
+                    <div class="number">1</div>
+                    <div class="number">2</div>
+                    <div class="number">3</div>
+                    <div class="number">4</div>
+                    <div class="number">5</div>
+                    <div class="number">6</div>
+                    <div class="number">7</div>
+                    <div class="number">8</div>
+                    <div class="number">9</div>
+                </div>
+    
+                <div id="minute-display">
+                   
+                </div>
+                <div id="second-display"></div>
+            </div>
+            <div class="show-timer-container">
+                <div id="hour"></div>
+                <div id="minute"></div>
+                <div id="second"></div>
+            </div>
+            
+           <div class="buttons">
+            <button id="startTime">START</button>
+            <button id="stopTime">PAUSE</button>
+            <button id="resetTime">RESET</button>
+           </div>
+           
+    </div>
+
+
+
+
+    </div>
+    
+
+    <script src="https://kit.fontawesome.com/09ab20fe19.js" crossorigin="anonymous"></script>
+    <script src= 
     "https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.js"
             integrity= 
     "sha512-BbVEDjbqdN3Eow8+empLMrJlxXRj5nEitiCAK5A1pUr66+jLVejo3PmjIaucRnjlB0P9R3rBUs3g5jXc8ti+fQ=="
