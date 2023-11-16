@@ -27,10 +27,10 @@
                 <button id="calculatorBtn"><i class="fa-solid fa-calculator" style="color: rgba(164, 131, 197,0.5); font-size: 10rem;"></i></button>
                  <!-- timer -->
                 <button id="timerBtn"><i class="fa-regular fa-hourglass" style="color: #000000; font-size: 10rem;"></i></button>
-            
+            <!-- calendar -->
+            <button id="calendarBtn"><i class="fa-solid fa-calendar" style="color:#776B5D ; font-size: 10rem;"></i></button>
             </div>
         </div>
-
         
         <div id="calculator">
             <h1>CALCULATOR</h1>
@@ -141,7 +141,35 @@
            
     </div>
 
-
+    <div id="calendar">
+        <div class="calendar-container">
+            <div class="calendar-left">
+             <div class="calendar" data-calendar>
+     
+                 <!-- month -->
+                 <div class="months">
+                     <button class="prev" data-prev>
+                         <i class="fas fa-angle-left" style="font-size: 1.5rem; color: #776B5D;"></i>
+                     </button>
+                     <div class="date" data-month>
+                         <h3>May 2021</h3>
+                     </div>
+                     <button class="next" data-next>
+                         <i class="fas fa-angle-right" style="font-size: 1.5rem; color: #776B5D;"></i>
+                     </button>
+                 </div>
+     
+                 <!-- days -->
+                 <div class="days" data-days> </div>
+     
+                 <!-- dates -->
+                 <div class="dates" data-dates> </div>
+             </div>
+            </div>
+     
+     
+         </div>
+    </div>
 
 
     </div>

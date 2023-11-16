@@ -2,12 +2,14 @@ const clockBtn = document.getElementById('clockBtn');
 const calculatorBtn = document.getElementById('calculatorBtn');
 const crossBtn = document.getElementById('crossBtn');
 const timerBtn = document.getElementById('timerBtn');
+const calendarBtn = document.getElementById('calendarBtn');
 
 const myList = document.getElementById('my-list');
 const calculator = document.getElementById('calculator');
 const cross = document.getElementById('cross');
 const clock = document.getElementById('clock');
 const timer = document.getElementById('timer');
+const calendar = document.getElementById('calendar');
 
 
 function addActiveClass(name){
@@ -23,6 +25,7 @@ crossBtn.addEventListener('click',()=>{
     removeActiveClass(calculator);
     removeActiveClass(clock);
     removeActiveClass(timer);
+    removeActiveClass(calendar);
 })
 
 calculatorBtn.addEventListener('click',()=>{
@@ -39,6 +42,12 @@ clockBtn.addEventListener('click',()=>{
 
 timerBtn.addEventListener('click',()=>{
     addActiveClass(timer);
+    removeActiveClass(myList);
+    addActiveClass(cross);
+});
+
+calendarBtn.addEventListener('click',()=>{
+    addActiveClass(calendar);
     removeActiveClass(myList);
     addActiveClass(cross);
 });
@@ -323,6 +332,79 @@ displayNumbers(secondDisplay);
 // //stop watch
 
 //calender
+
+const calendarContainer = document.querySelector('[data-calendar]')
+const monthsContainer = document.querySelector('[data-month]');
+const daysContainer = document.querySelector('[data-days]');
+const prevBtn = document.querySelector('[data-prev]');
+const nextBtn = document.querySelector('[data-next]');
+const datesContainer = document.querySelector('[data-dates]');
+
+
+
+const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+const todayDate = new Date();
+let selectedDate = todayDate;       // selectedDate is the date that is selected by the user
+console.log(todayDate);
+console.log(todayDate.getDate());
+console.log(todayDate.getMonth());
+console.log(todayDate.getFullYear());
+console.log(todayDate.getDay());
+
+function renderCalendar() {
+    monthsContainer.innerHTML = '';
+    daysContainer.innerHTML = '';
+    datesContainer.innerHTML = '';
+
+    const firstDayOfMonth = new Date(selectedDate.getFullYear(), selectedDate.getMonth(), 1);
+    const lastDayOfMonth = new Date(selectedDate.getFullYear(), selectedDate.getMonth() + 1, 0);
+    console.log(firstDayOfMonth);
+    console.log(lastDayOfMonth);
+
+    const monthName = months[selectedDate.getMonth()];
+    const year = selectedDate.getFullYear();
+    monthsContainer.innerHTML = monthName + ' ' + year;
+
+    for (let i = 0; i < daysOfWeek.length; i++) {
+        const day = document.createElement('div');
+        day.classList.add('day');
+        day.innerText = daysOfWeek[i];
+        daysContainer.appendChild(day);
+    }
+
+    for (let i = 0; i < firstDayOfMonth.getDay(); i++) {
+        const date = document.createElement('div');
+        date.classList.add('date');
+        datesContainer.appendChild(date);
+    }
+
+    for (let i = 1; i <= lastDayOfMonth.getDate(); i++) {
+        const date = document.createElement('div');
+        date.classList.add('date');
+        date.innerText = i;
+        if (i === todayDate.getDate() && selectedDate.getMonth() === todayDate.getMonth() && selectedDate.getFullYear() === todayDate.getFullYear()) {
+            date.classList.add('todays-date');
+        }
+        datesContainer.appendChild(date);
+    }
+}
+
+renderCalendar();
+
+prevBtn.addEventListener('click', () => {
+    selectedDate = new Date(selectedDate.getFullYear(), selectedDate.getMonth() - 1, selectedDate.getDate());
+    renderCalendar();
+}
+);
+
+nextBtn.addEventListener('click', () => {
+    selectedDate = new Date(selectedDate.getFullYear(), selectedDate.getMonth() + 1, selectedDate.getDate());
+    console.log(selectedDate);
+    renderCalendar();
+}
+);
 
 
 
