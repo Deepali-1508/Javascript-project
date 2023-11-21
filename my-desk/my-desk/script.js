@@ -89,10 +89,10 @@ const hourNeedle = document.getElementById('hour-hand');
 const minuteNeedle = document.getElementById('minute-hand');
 
 setInterval(()=>{
-const date = new Date();
-    let h = date.getHours();
-    let m = date.getMinutes();
-    let s = date.getSeconds();
+const newDate = new Date();
+    let h = newDate.getHours();
+    let m = newDate.getMinutes();
+    let s = newDate.getSeconds();
     let session = "AM";
     // Convert to 12 hour format AND CHANGE INITO PM
 
@@ -333,6 +333,7 @@ displayNumbers(secondDisplay);
 
 //calender
 
+// const calendar = document.getElementById('calendar');
 const calendarContainer = document.querySelector('[data-calendar]')
 const monthsContainer = document.querySelector('[data-month]');
 const daysContainer = document.querySelector('[data-days]');
@@ -347,11 +348,11 @@ const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 
 
 const todayDate = new Date();
 let selectedDate = todayDate;       // selectedDate is the date that is selected by the user
-console.log(todayDate);
-console.log(todayDate.getDate());
-console.log(todayDate.getMonth());
-console.log(todayDate.getFullYear());
-console.log(todayDate.getDay());
+// console.log(todayDate);
+// console.log(todayDate.getDate());
+// console.log(todayDate.getMonth());
+// console.log(todayDate.getFullYear());
+// console.log(todayDate.getDay());
 
 function renderCalendar() {
     monthsContainer.innerHTML = '';
@@ -360,8 +361,8 @@ function renderCalendar() {
 
     const firstDayOfMonth = new Date(selectedDate.getFullYear(), selectedDate.getMonth(), 1);
     const lastDayOfMonth = new Date(selectedDate.getFullYear(), selectedDate.getMonth() + 1, 0);
-    console.log(firstDayOfMonth);
-    console.log(lastDayOfMonth);
+    // console.log(firstDayOfMonth);
+    // console.log(lastDayOfMonth);
 
     const monthName = months[selectedDate.getMonth()];
     const year = selectedDate.getFullYear();
@@ -388,10 +389,12 @@ function renderCalendar() {
             date.classList.add('todays-date');
         }
         datesContainer.appendChild(date);
+         addingEventListenerToDates(date);
     }
 }
 
 renderCalendar();
+
 
 prevBtn.addEventListener('click', () => {
     selectedDate = new Date(selectedDate.getFullYear(), selectedDate.getMonth() - 1, selectedDate.getDate());
@@ -401,37 +404,221 @@ prevBtn.addEventListener('click', () => {
 
 nextBtn.addEventListener('click', () => {
     selectedDate = new Date(selectedDate.getFullYear(), selectedDate.getMonth() + 1, selectedDate.getDate());
-    console.log(selectedDate);
+    // console.log(selectedDate);
     renderCalendar();
 }
 );
 
 
+const eventDay = document.querySelector('[data-eventDay]');
+const eventDate = document.querySelector('[data-eventDate]');
+const events = document.querySelector('[data-events]'); 
+
+const closeEventWrapper = document.querySelector('[data-closeEventWrapper]');
+const addEventWrapper = document.querySelector('[data-addEventWrapper]'); 
+const addEventBtnEventWrapper = document.querySelector('[data-addEventBtnEventWrapper]');
+const addEventBtn = document.querySelector('[data-addEventBtn]'); 
+
+const eventNameInput = document.querySelector('[data-eventNameInput]');
+const eventTimeInputFrom = document.querySelector('[data-eventTimeInputFrom]');
+const eventTimeInputTo = document.querySelector('[data-eventTimeInputTo]');
+
+addEventBtn.addEventListener('click',()=>{
+    addEventWrapper.classList.add('active');
+})
+
+closeEventWrapper.addEventListener('click',()=>{
+    addEventWrapper.classList.remove('active');
+});
+
+let dateOfSelectedEvent = selectedDate.getDate() + ' ' + months[selectedDate.getMonth()] + ' ' + selectedDate.getFullYear() ;
+function addingEventListenerToDates(date) {
+    date.addEventListener('click',()=>{
+
+      let clickedDate = date.innerText;
+      let clickedMonth = selectedDate.getMonth();
+      let clickedYear = selectedDate.getFullYear();
+
+      eventDate.innerText = clickedDate + ' ' + months[clickedMonth] + ' ' + clickedYear;
+      dateOfSelectedEvent = clickedDate + ' ' + months[clickedMonth] + ' ' + clickedYear; 
+      eventDay.innerText = daysOfWeek[new Date(clickedYear, clickedMonth, clickedDate).getDay()];
+    
+      addingEventsToEventBox();
+      activeDate();
+    })
+}
 
 
+function addingEventsToEventBox(){
+    // //add event to local storage with respect to its collective date
+    events.innerHTML = '';
+    let showEvent = getEventsFromLocalStorage();
+   
+    showEvent.forEach((event)=>{
+        let createEvent = document.createElement('div');
+        createEvent.classList.add('event');
+        createEvent.addEventListener('click',()=>{
+            deleteEventFromLocalStorage(event);
+        });
+        createEvent.innerHTML = `
+           <div class="title">
+           <i class="fas fa-circle"></i>
+           <h3 class="event-title">${event.eventName}</h3>
+           </div>
+           <div class="event-time">
+           <span class="event-time">${event.eventTimeFrom}-${event.eventTimeTo}</span>
+           </div>
+               `
+    events.appendChild(createEvent);
+    })
 
+    if(showEvent.length === 0){
+            events.innerHTML = `<div class="no-event">
+                    <h3>No Events</h3>
+                </div>`;
+        }
+}
+addingEventsToEventBox();
+showEventAddedInDate();
 
-//count down timer
+function deleteEventFromLocalStorage(event){
+    // console.log("delete event",event);
+    if(confirm("Are you sure you want to delete this event?")){
+        localStorage.removeItem(`${dateOfSelectedEvent}-${event.eventName}`);
+    }
+    addingEventsToEventBox();
+}
 
+function showEventAddedInDate(){
+    let eventArray = [];
+    for(let i=0; i<localStorage.length; i++){
+       let key = localStorage.key(i).trim(' ').split(' ')[0];
+         eventArray.push(key);
+    }
+    // console.log(eventArray);
+    const dates = document.querySelectorAll('.date');
+    dates.forEach((date)=>{
+        let dateValue = date.innerText;
+        if(eventArray.includes(dateValue)){
+            date.classList.add('event-added');
+        }else{
+            date.classList.remove('event-added');
+        }
+    })
+}
+// console.log("dateOfSelectedEvent",dateOfSelectedEvent);
+ function activeDate(){
+    // alert("active date");
+    const dates = document.querySelectorAll('.date');
+    dates.forEach((date)=>{
+        let dateValue = date.innerText;
+        // console.log("active claass",dateOfSelectedEvent.split(' ')[0]);
+        if(dateOfSelectedEvent.split(' ')[0] === dateValue){
+            date.classList.add('clicked-date');
+        }
+        else{
+            date.classList.remove('clicked-date');
+        }
+    })
+}
+activeDate();
+function getEventsFromLocalStorage(){
+    
+    let eventsFromLocalStorage = [];
+    for(let i=0; i<localStorage.length; i++){
+        let key = localStorage.key(i);
+        let eventDate = key.split('-')[0];
+        if(eventDate.includes(dateOfSelectedEvent)){
+            let eventObjString = localStorage.getItem(key);
+            let eventObj = JSON.parse(eventObjString);
+            eventsFromLocalStorage.push(eventObj);
+        }
+    }
+    return eventsFromLocalStorage;
+}
 
+eventTimeInputFrom.addEventListener('input',(e)=>{
+    eventTimeInputFrom.value = e.target.value.replace(/[^0-9:]/g, '');
+    if(eventTimeInputFrom.value.length ===2){
+        eventTimeInputFrom.value += ':';
+    }
+    if(eventTimeInputFrom.value.length >5){
+        eventTimeInputFrom.value = eventTimeInputFrom.value.slice(0,5);
+    }
+});
 
-//stop watch
+eventTimeInputTo.addEventListener('input',(e)=>{
+    eventTimeInputTo.value = e.target.value.replace(/[^0-9:]/g,'');
+    if(eventTimeInputTo.value.length ===2){
+        eventTimeInputTo.value += ':';
+    }
+    if(eventTimeInputTo.value.length >5){
+        eventTimeInputTo.value = eventTimeInputTo.value.slice(0,5);
+    }
+})
+// addEventBtnEventWrapper.addEventListener('click',()=>{
+//     addEventToLocalStorage();
+//     addEventWrapper.classList.remove('active');
+//     eventNameInput.value = '';
+//     eventTimeInputFrom.value = '';
+//     eventTimeInputTo.value = '';
+// });
 
+function addEventToLocalStorage(eventTitle, timeFrom, timeTo){
+    let eventObj = {
+        eventName: eventTitle,
+        eventTimeFrom: timeFrom,
+        eventTimeTo: timeTo
+    }
+    let eventObjString = JSON.stringify(eventObj);
+    localStorage.setItem(`${dateOfSelectedEvent}-${eventObj.eventName}`, eventObjString);
+    showEventAddedInDate();
 
-//timer
+}
 
+addEventBtnEventWrapper.addEventListener('click',()=>{
+    const eventTitle = eventNameInput.value;
+    const eventTimeFrom = eventTimeInputFrom.value;
+    const eventTimeTo = eventTimeInputTo.value;
+    
+    if(eventTimeFrom === "" || eventTimeTo === "" || eventTitle === ""){
+        alert("Please fill all the fields");
+        return;
+    }
+    //check both time format 24hour
+    
+    const timeFromArr = eventTimeFrom.split(':');
+    const timeToArr = eventTimeTo.split(':');
+    if(timeFromArr.length !== 2 || timeToArr.length !== 2 || timeFromArr[0]>23 || timeToArr[0]>23 || timeFromArr[1] >59 || timeToArr[1] >59){
+        alert("Please enter valid time");
+        return;
+    }
+    
+    const timeFrom = convertTime(eventTimeFrom);
+    const timeTo = convertTime(eventTimeTo);
 
-//alarm clock
+    //check if event is already exist
+    let eventExist = false;
+    // if()
+    
+    addEventToLocalStorage(eventTitle, timeFrom, timeTo);
+    addEventWrapper.classList.remove('active');
+    eventNameInput.value = '';
+    eventTimeInputFrom.value = '';
+    eventTimeInputTo.value = '';
+    addingEventsToEventBox()
+})
 
+function convertTime(time){
+    //convert time to 24 hour format
+    let timeArr = time.split(':');
+    let hour = timeArr[0];
+    let minute = timeArr[1];
 
-//progress bar
-
-
-//accordion
-
-
-//modal
-
-
-
+    let timeFormat = hour >=12 ? 'PM' : 'AM';
+    hour = hour % 12 || 12;
+    time = `${hour}:${minute} ${timeFormat}`;
+    console.log("tgime",time)
+    return time;
+}
 
