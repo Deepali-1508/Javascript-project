@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Speech to text</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Speech to Text</h1>
+        <div class="languages">
+               <label for="language">Select Language</label>
+                <select name="input-language" id="language" data-langSelect></select> 
+        </div>
+
+        <div>
+            <button data-startBtn class="recordBtn">
+                <p>Start Listening</p>
+            </button>
+        </div>
+        <div class="result" data-resultText>
+            <p class="interim"></p>
+        </div>
+
+        <div class="buttons">
+            <button class="downloadBtn" data-downloadBtn>Download</button>
+            <button class="clearBtn" data-clearBtn>Clear</button>    
+        </div>
+        </div>
+    <script src="language.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
