@@ -1,1 +1,1 @@
-(quiz-app)[https://quiz-app-two-iota.vercel.app/]
+[quiz-app](https://quiz-app-two-iota.vercel.app/)

@@ -17,7 +17,14 @@
 | 15     | ideasGathering     | [ideasGathering](https://idea-gathering.vercel.app/) |
 | 16     | art-gallery        | [art-gallery](https://art-gallery-blue-chi.vercel.app/) |
 | 17     | some-days          | [some-days](https://some-days.vercel.app/)          |
-| 18     | tour-with-me       | [tour-with-me](https://tour-with-me.vercel.app/)    |
-| 19     | course-find/content crafter       | [content crafter](https://content-crafter-flame.vercel.app/)   |
-| 20    | snake-game      | [snake-game](https://serpentine-challenge.vercel.app/)  |
-| 21    | my-desk      | [my-desk](https://my-desk.vercel.app/)https://my-desk.vercel.app/)  |
+| 18     | some-days(responsive)          | [some-days](https://some-days.vercel.app/)          |
+| 19     | tour-with-me       | [tour-with-me](https://tour-with-me.vercel.app/)    |
+| 20     | course-find/content crafter       | [content crafter](https://content-crafter-flame.vercel.app/)   |
+| 21    | snake-game      | [snake-game](https://serpentine-challenge.vercel.app/)  |
+| 22    | my-desk(calculator)      | [my-desk](https://my-desk.vercel.app/)https://my-desk.vercel.app/)  |
+| 23    | my-desk(clock)     | [my-desk](https://my-desk.vercel.app/)  |
+| 24    | my-desk(timer)     | [my-desk](https://my-desk.vercel.app/)  |
+| 25   | my-desk(calendar)     | [my-desk](https://my-desk.vercel.app/)  |
+| 26   | my-desk(calendar)     | [my-desk](https://my-desk.vercel.app/)  |
+| 27   | speech-to-text     | [speech-to-text](https://speech-to-text-alpha.vercel.app/)  |
+| 28   | quiz-app     | [quiz-app](https://quiz-app-two-iota.vercel.app/)  |
