@@ -36,8 +36,8 @@ init();
 function quizEnd(score,total){
   quizQuestionsWrapper.classList.remove("active");
   quizEndWrapper.classList.add("active");
-  finalScore.textContent = score;
-  totalScore.textContent = `${total}`;
+  finalScore.innerHTML = score;
+  totalScore.innerHTML = `${total}`;
 }
 
  restartBtn.addEventListener("click",restartQuiz)
@@ -54,7 +54,7 @@ function restartQuiz(){
   cat = category.value,
   diff = difficulty.value;
 
-  loadingAnimation();
+  // loadingAnimation();
 
   startQuizWrapper.classList.remove("active");
   quizQuestionsWrapper.classList.add("active");
