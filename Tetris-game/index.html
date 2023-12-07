@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>TETRIS</title>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <div class="score-container">
+                <h1>Your score</h1>
+               <div class="score" data-score>0</div>
+               <button data-startBtn>start</button>
+            </div>
+            <div class="game-over-container">
+                <h1>Game Over</h1>
+                <h2>Score: <span class="score" data-fScore>0</span></h2>
+               <button data-reStartBtn>Restart Game</button>
+            </div>
+        </div>
+        
+        <div class="grid-container" data-gridContainer>
+            
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

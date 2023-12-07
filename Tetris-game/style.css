@@ -1,0 +1,106 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: #1D1D1C;
+}
+
+.container{
+  background-image: url(./images/background.jpeg);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-repeat-y: no-repeat;
+  background-position: bottom;
+}
+h1{
+  color: white;
+}
+.score-container ,.game-over-container, .grid-container{
+   width: 200px;
+   height: 400px;
+   background-color: #1D1D1C;
+}
+
+.score-container,.game-over-container{
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  color: #fff;
+}
+
+.score-container.active{
+  display: flex;
+}
+.game-over-container.active{
+  display: flex;
+}
+
+.grid-container{
+  display: flex;
+  flex-wrap: wrap;
+  /* background-color: #fff; */
+}
+.grid-container div{
+  width: 20px;
+  height: 20px;
+}
+
+
+.score-container .score{
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+ button{
+  padding: 10px 15px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+
+
+.taken{
+  background-color: rgb(153, 133, 209);
+}
+.block{
+  background-color: blue;
+}
+.block {
+  background-image: url(../images/blue_block.png);
+}
+
+.block2 {
+  z-index: 100;
+  background-color: rgb(203, 178, 243);
+  border: 1px solid rgb(180, 155, 219);
+  background-image: url(../images/purple_block.png);
+}
+
+.block3 {
+  
+  background-image: url(../images/green_block.png);
+}
+
+.block4 {
+  background-image: url(../images/navy_block.png);
+}
+
+.block5 {
+  background-image: url(../images/pink_block.png);
+}
+
+.end {
+  background-color: #d8edea;
+}   
