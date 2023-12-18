@@ -28,4 +28,4 @@
 | 26   | my-desk(calendar)     | [my-desk](https://my-desk.vercel.app/)  |
 | 27   | speech-to-text     | [speech-to-text](https://speech-to-text-alpha.vercel.app/)  |
 | 28   | quiz-app     | [quiz-app](https://quiz-app-two-iota.vercel.app/)  |
-| 29   | Tetris Game     | [Tetris Game](https://tetris-game-tawny.vercel.app/)  |
+| 29   | Tetris Game     | [TetrisGame](https://tetris-game-tawny.vercel.app/)  |

@@ -248,7 +248,7 @@ function moveDown(){
       gameOverContainer.classList.remove('active')
     })
 
-  //show previous tetromino in scoreDisplay
+  // Next tetromino
   const displayWidth = 4
   const displaySquares = document.querySelectorAll('.next-block div')
   let displayIndex = 0
@@ -284,4 +284,5 @@ function moveDown(){
     })
     
   }
+
 })
