@@ -20,6 +20,13 @@ body{
   background-repeat-y: no-repeat;
   background-position: bottom;
 }
+
+.container-one{
+  display: flex;
+  flex-direction: column;
+  background-color: #1D1D1C;
+}
+
 h1{
   color: white;
 }
@@ -36,6 +43,14 @@ h1{
   gap: 10px;
   align-items: center;
   color: #fff;
+}
+
+.next-block {
+  display: grid;
+  padding-left: 4rem;
+  grid-template-columns: repeat(4, 20px); /* Adjust the column width as needed */
+  grid-template-rows: repeat(4, 20px); /* Adjust the row height as needed */
+  background-color: #1D1D1C;
 }
 
 .score-container.active{
@@ -56,6 +71,10 @@ h1{
 }
 
 
+.container-one h3 {
+  color: #ddd;
+  padding-left: 1.5rem;
+}
 .score-container .score{
   font-size: 1rem;
   font-weight: bold;
@@ -103,4 +122,10 @@ h1{
 
 .end {
   background-color: #d8edea;
-}   
+}
+
+.nb{
+  width: 20px;
+  height: 20px;
+  /* background-color: red; */
+}

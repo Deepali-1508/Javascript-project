@@ -5,12 +5,11 @@ document.addEventListener('DOMContentLoaded',()=>{
   const gameOverContainer = document.querySelector('.game-over-container');
 
   let grid = createGrid();
-  let squares = Array.from(grid.querySelectorAll('div'))
   const score = document.querySelector('[data-score]');
   const fScore = document.querySelector('[data-fScore]')
   const startBtn = document.querySelector('[data-startBtn]');
   const reStartBtn = document.querySelector('[data-reStartBtn]');
-// let squares = Array.from(document.querySelectorAll('.grid-container div'))
+   let squares = Array.from(document.querySelectorAll('.grid-container div'))
    const width = 10;
    const GRID_WIDTH = 10;
    let currScore =0;
@@ -80,13 +79,13 @@ const iTetromino = [
   [GRID_WIDTH, GRID_WIDTH + 1, GRID_WIDTH + 2, GRID_WIDTH + 3]
 ]
 
-
 const theTetrominoes = [iTetromino,oTetromino,tTetromino,zTetromino,lTetromino];
 let random = Math.floor(Math.random()*theTetrominoes.length)
-let currentRotation = Math.floor(Math.random()* lTetromino.length);
+let nextRandom = 0;
+let currentRotation = 0;
 let currentPosition = 4;
 let currentTetromino = theTetrominoes[random][currentRotation];
-
+let prevTetromino = theTetrominoes[random][currentRotation];
 
 function draw(){
   currentTetromino.forEach((index)=>{
@@ -107,17 +106,27 @@ function freeze(){
     currentTetromino.forEach(index => squares[currentPosition+index].classList.add('taken'))
 
     //start new tetromino falling
-     random =Math.floor(Math.random()*theTetrominoes.length)
-    currentRotation = Math.floor(Math.random()* lTetromino.length);
+    currentRotation = 0;
+    random = nextRandom
+    nextRandom = Math.floor(Math.random() * theTetrominoes.length)
+    console.log(random)
+     console.log(nextRandom)
     currentTetromino = theTetrominoes[random][currentRotation];
     currentPosition = 4;
     randomColors = Math.floor(Math.random()*colors.length)
     draw();
+    displayShape();
     addScore();
     gameOver();
+    // drawNextTetromino();
   }
 }
 // timerId = setInterval(moveDown, 1000)
+let nextWidth = 4;
+const nextTetromino = document.querySelector('[data-nextTetrimino]');
+displayGridForNextTetromino();
+const nextGridContainerSquare = document.querySelectorAll('.nb');
+
 
 startBtn.addEventListener('click', () => {
   if (timerId) {
@@ -129,8 +138,10 @@ startBtn.addEventListener('click', () => {
     currScore = 0;
     score.innerHTML = currScore;
     timerId = setInterval(moveDown, 1000)
-    random = Math.floor(Math.random() * theTetrominoes.length)
-    
+=
+    random = Math.floor(Math.random() * theTetrominoes.length);
+    nextRandom = Math.floor(Math.random() * theTetrominoes.length); // Add this line
+ 
 })
 
 
@@ -238,6 +249,41 @@ function moveDown(){
       scoreContainer.classList.add('active');
       gameOverContainer.classList.remove('active')
     })
+
+  //show previous tetromino in scoreDisplay
+  const displayWidth = 4
+  const displaySquares = document.querySelectorAll('.next-block div')
+  let displayIndex = 0
+
+  function displayGridForNextTetromino() {
   
+    nextTetromino.innerHTML = '';
+    for(let i=0;i<16;i++){
+      let div = document.createElement('div');
+       div.classList.add('nb')
+      nextTetromino.appendChild(div);
+    }
+  }
   
+  const smallTetrominoes = [
+    [1, displayWidth + 1, displayWidth * 2 + 1, displayWidth * 3 + 1], /* iTetromino */
+     [0, 1, displayWidth, displayWidth + 1], /* oTetromino */
+    [1, displayWidth, displayWidth + 1, displayWidth + 2], /* tTetromino */
+     [0, displayWidth, displayWidth + 1, displayWidth * 2 + 1], /* zTetromino */
+     [1, displayWidth + 1, displayWidth * 2 + 1, 2], /* lTetromino */
+  ]
+
+  function displayShape() {
+    displaySquares.forEach(square => {
+      square.classList.remove('block')
+      square.style.backgroundImage = 'none'
+    })
+    // console.log(smallTetrominoes[nextRandom])
+    smallTetrominoes[nextRandom].forEach(index => {
+      console.log("inside samm tertrominoes")
+      displaySquares[displayIndex + index].classList.add('block')
+      displaySquares[displayIndex + index].style.backgroundImage = colors[nextRandom]
+    })
+    
+  }
 })
