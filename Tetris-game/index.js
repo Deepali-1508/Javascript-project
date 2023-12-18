@@ -1,5 +1,3 @@
-
-
 document.addEventListener('DOMContentLoaded',()=>{
   const scoreContainer = document.querySelector('.score-container');
   const gameOverContainer = document.querySelector('.game-over-container');
